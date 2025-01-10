@@ -4,26 +4,192 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JEG & Sons</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact JEG</a>
+        <!-- Company Logo on the Left -->
+        <div class="logo">
+          <img
+            src="./assets/jegandsons-logo.png"
+            alt="JEG & Sons Logo"
+            class="default-logo"
+          />
+          <img
+            src="./assets/jeglogo-white.png"
+            alt="JEG & Sons Logo"
+            class="scrolled-logo"
+          />
+        </div>
+        <!-- Navigation Items on the Right -->
+        <div class="nav-links">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#services">SERVICES</a>
+          <a href="#contact" class="btn-contact">CONTACT JEG</a>
+        </div>
       </nav>
     </header>
     <!-- Home Section -->
+
     <section id="home">
-      <div>
-        <h1>E-COMMERCE SIMPLIFIED.</h1>
-        <p>
-          Get the freedom to focus on product development and brand management,
-          leave the rest to us.
-        </p>
+      <div class="home-container">
+        <!-- Left Column (Text) -->
+        <div class="home-text">
+          <h1>E-COMMERCE SIMPLIFIED.</h1>
+          <p>
+            Get the freedom to focus on product development<br />
+            and brand management, leave the rest to us.
+          </p>
+        </div>
       </div>
     </section>
+    <section class="about-jeg">
+      <div class="about-jeg-container">
+        <h1 class="about-jeg-title">ABOUT JEG</h1>
+        <p class="about-jeg-intro">
+          We are disrupting our industry by making it easier for our clients to
+          develop their business and fuel profitability with US e-tailers and
+          retailers.
+        </p>
+        <p class="about-jeg-description">
+          JEG allows manufacturers to increase their sales by accessing multiple
+          sales channels, with little or no upfront costs. With JEG managing all
+          aspects of your business, you are free to focus on what makes your
+          company more competitive.
+        </p>
+        <p class="about-jeg-history">
+          For the past 10 years JEG has enjoyed tremendous success selling
+          online. Our investment in technology and know-how has allowed us to
+          reach multiple milestones and places us at the very front of the
+          eCommerce industry:
+        </p>
+        <ul class="about-jeg-milestones">
+          <li>
+            <div class="icon">
+              <i class="fa fa-amazon fa-4x" aria-hidden="true"></i>
+            </div>
+            <div class="slicer"></div>
+            <div class="text">
+              <span>Ranked among the Top 50 Sellers on Amazon.com</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="slicer"></div>
+            <div class="text">
+              <span
+                >Established commercial relationships with top retailers and
+                sales platforms</span
+              >
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fa fa-truck fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="slicer"></div>
+            <div class="text">
+              <span
+                >A state-of-the-art distribution distribution center that offers
+                same-day shipping to your customer's door.</span
+              >
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fa fa-link fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="slicer"></div>
+            <div class="text">
+              <span
+                >EDI integration with E-commerce’s largest channels for seamless
+                and reliable order management</span
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+    </section>
   </body>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- 1st Column: Subscribe Section -->
+      <div class="footer-column">
+        <img src="./assets/jeglogo-white.png" alt="Company Logo" class="logo" />
+        <h1>Subscribe now</h1>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- 2nd Column: Contact Us Section -->
+      <div class="footer-column">
+        <h1>Contact Us</h1>
+        <ul>
+          <li><i class="fas fa-envelope"></i> info@jegsons.com</li>
+          <li><i class="fas fa-phone-alt"></i> +1 (305) 654 7555</li>
+          <li>
+            <i class="fas fa-globe"></i> 20000 NE 15th Ct, Miami, FL 33179
+          </li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/jegandsons/" class="social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/jegsons3pl/"
+            class="social-icon"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- 3rd Column: Helpful Links Section -->
+      <div class="footer-column">
+        <h1>Helpful Links</h1>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- 4th Column: Information Section -->
+      <div class="footer-column">
+        <h1>Information</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact JEG</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="goToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script
+    src="https://kit.fontawesome.com/2dbb01b8f7.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
 </html>

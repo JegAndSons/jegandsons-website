@@ -11,53 +11,407 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navigation Styles */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: transparent;
   color: white;
   padding: 10px 20px;
   z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background: #242651;
+  color: white;
 }
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 65px;
+}
+
+.nav-links {
+  display: flex;
   gap: 20px;
 }
 
-nav a {
+.nav-links a {
   color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
   padding: 5px 10px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover {
-  background: #007bff;
+.nav-links a:hover {
+  background-color: #ef8903;
+  color: white;
+}
+
+.nav-links .btn-contact {
+  background-color: #ff6600;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links .btn-contact:hover {
+  background-color: darkorange;
+}
+
+nav .logo img {
+  display: none;
+}
+
+nav .logo .default-logo {
+  display: block;
+}
+
+nav.scrolled .logo .scrolled-logo {
+  display: block;
+}
+
+nav.scrolled .logo .default-logo {
+  display: none;
 }
 
 /* Home Section Styles */
 #home {
   height: 100vh;
-  background: url("./assets/bg.jpg") no-repeat center center/cover;
-  color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0) 15%,
+      rgba(255, 255, 255, 0) 95%,
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/new-bg.jpg") no-repeat center center/cover;
+  color: white;
+  padding: 20px;
+}
+
+.home-container {
+  display: flex;
+  width: 90%;
+  max-width: 2000px;
+  height: 80%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left Column (Text) */
+.home-text {
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.home-text h1 {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+  background: linear-gradient(90deg, #ffffff 25%, #ffffff 50%, #ef8903 75%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear forwards;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.home-text p {
+  font-size: 2.2rem;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* About JEG Section */
+.about-jeg {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
   text-align: center;
 }
 
-#home h1 {
-  font-size: 3rem;
+.about-jeg-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title */
+.about-jeg-title {
+  font-size: 2.5em;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Introduction Text */
+.about-jeg-intro,
+.about-jeg-description,
+.about-jeg-history {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Milestones List */
+.about-jeg-milestones {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Milestone Item */
+.about-jeg-milestones li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease, background-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Icon Styles (No circle, only icon) */
+.about-jeg-milestones .icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-jeg-milestones .icon i {
+  color: #003366;
+  transition: color 0.5s ease;
+}
+
+/* Slicer (Vertical Line) */
+.about-jeg-milestones .slicer {
+  width: 1px;
+  height: 100%;
+  background-color: #003366;
+  margin-right: 20px;
+}
+
+/* Text Styles */
+.about-jeg-milestones .text {
+  flex-grow: 1;
+  text-align: left;
+  color: #333;
+  transition: color 0.5s ease;
+}
+
+/* Hover Effect - Entire li */
+.about-jeg-milestones li:hover {
+  background-color: #ff6600;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
+}
+
+/* Hover Effect for Icon */
+.about-jeg-milestones li:hover .icon {
+  background-color: transparent;
+}
+
+.about-jeg-milestones li:hover .icon i {
+  color: #ffffff;
+}
+
+/* Hover Effect for Text */
+.about-jeg-milestones li:hover .text {
+  color: #ffffff;
+}
+
+/* When Scrolled into View */
+.about-jeg-milestones li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-jeg-milestones {
+    grid-template-columns: 1fr;
+  }
+
+  .about-jeg-milestones .slicer {
+    display: none;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #242651;
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-column img {
+  max-height: 50px;
+}
+
+.footer-column h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column ul {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-column .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #00ffff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
   margin-bottom: 10px;
 }
 
-#home p {
-  font-size: 1.2rem;
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #00ffff;
+}
+
+.footer-column .subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column .subscribe-form input {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  max-width: 250px;
+}
+
+.footer-column .subscribe-form button {
+  padding: 10px;
+  border: none;
+  background-color: #ef8903;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.footer-column .subscribe-form button:hover {
+  background-color: #ff9100;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ef8903;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.back-to-top:hover {
+  background-color: #ff9100;
+}
+
+/* Font Awesome Icons Styling */
+.fas,
+.fab {
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    flex: none;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
