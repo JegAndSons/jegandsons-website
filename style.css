@@ -358,7 +358,7 @@ nav.scrolled .logo .default-logo {
 
 .footer-column .subscribe-form input {
   padding: 10px;
-  border: none;
+  border-radius: 5px;
   width: 100%;
   max-width: 250px;
 }
@@ -386,7 +386,7 @@ nav.scrolled .logo .default-logo {
   background-color: #ef8903;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 5px 10px 15px;
   font-size: 1.5rem;
   cursor: pointer;
   border-radius: 5px;
@@ -413,5 +413,100 @@ nav.scrolled .logo .default-logo {
     flex: none;
     margin-bottom: 20px;
     text-align: center;
+  }
+}
+
+/* Vision & Connector Section */
+#mission-vision {
+  position: relative;
+  padding: 20px 20px;
+  background-color: #242651; /* Black background for the section */
+  color: white; /* Text color set to white for contrast */
+  overflow: hidden;
+  height: auto; /* Ensure the section takes up full height */
+}
+
+/* Particle.js Background */
+#mission-vision::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the particles stay behind the content */
+}
+
+/* Main Container for Vision and Mission (side by side columns) */
+.mission-vision-container {
+  display: flex; /* Flexbox for side-by-side layout */
+  justify-content: space-evenly; /* Distribute space evenly */
+  align-items: center; /* Align items vertically in the center */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+}
+
+/* Left Column for Vision */
+.vision-column {
+  flex: 1; /* Take up equal space */
+  padding-right: 20px;
+  text-align: left;
+}
+
+.vision-column h2 {
+  font-size: 5rem;
+  color: #f77c00; /* Orange color for heading */
+  margin-bottom: 10px;
+}
+
+.vision-column h3 {
+  font-size: 2rem;
+  color: white; /* White for subheading */
+  margin-bottom: 20px;
+}
+
+.vision-column p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Right Column for Mission */
+.mission-column {
+  flex: 1; /* Take up equal space */
+  text-align: left;
+}
+
+.mission-column h2 {
+  font-size: 5rem;
+  color: #f77c00; /* Orange for heading */
+  margin-bottom: 10px;
+}
+
+.mission-column h3 {
+  font-size: 2rem;
+  color: white; /* White for subheading */
+  margin-bottom: 20px;
+}
+
+.mission-column p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision-container {
+    flex-direction: column; /* Stack columns vertically on small screens */
+    text-align: center;
+  }
+
+  .vision-column,
+  .mission-column {
+    padding-right: 0;
+    padding-bottom: 20px;
   }
 }

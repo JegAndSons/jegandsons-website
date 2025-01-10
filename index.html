@@ -48,7 +48,7 @@
     </section>
     <section class="about-jeg">
       <div class="about-jeg-container">
-        <h1 class="about-jeg-title">ABOUT JEG</h1>
+        <h1 class="about-jeg-title">ABOUT JEG & Sons</h1>
         <p class="about-jeg-intro">
           We are disrupting our industry by making it easier for our clients to
           develop their business and fuel profitability with US e-tailers and
@@ -116,6 +116,141 @@
       </div>
     </section>
 
+    <!-- Mission and Vision Section -->
+    <section id="mission-vision">
+      <div class="mission-vision-container">
+        <!-- Left Column for Vision -->
+        <div class="vision-column">
+          <h2>Vision</h2>
+          <h3>Complete Supply Chain Expert</h3>
+          <p>
+            An industry-leading supply chain expert recognized for its strategy,
+            creativity, and relationships.
+          </p>
+          <h2>Mission</h2>
+          <h3>Supply Chain Reimagined</h3>
+          <p>
+            We are a best-in-class supply chain expert leveraging our expertise
+            to create opportunities and abundance for our partners, our
+            communities, and ourselves.
+          </p>
+        </div>
+
+        <!-- Right Column for Mission -->
+        <div class="mission-column">
+          <h2>JEG Values</h2>
+
+          <p>
+            Commitment to Growing We invest in the growth of our people.
+            Recognizing we are the vessel for God’s blessings, our people invest
+            in themselves too. We are responsible and accountable. We embrace
+            the discomfort of trying something new. Mission First We are one
+            team; one company unit driving our common company mission. Though we
+            value winning and giving recognition, these are important only in
+            service to our mission. Running Lean We are agile, proactive and
+            hungry. The enemy is complacency. We create efficient solutions
+            supporting success. We aggressively limit red tape, bureaucracy, and
+            hierarchy. JEG & Sons, Inc. Employee Handbook Document No. QCD-033 |
+            Rev v. 4 Service Leadership We retain our humility at all times and
+            respect all positions and team members. Our leaders exist to support
+            our team delivering results. We remember to have fun, not taking
+            ourselves too seriously. Results Driven We make stuff happen versus
+            wanting or wishing it into being. We consistently drive to create
+            more. We look for problems before they arise. We present a solution
+            for any problem we see.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Particle.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("mission-vision", {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#f77c00", // Orange color for particles
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 4,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#f77c00", // Orange color for lines
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+          },
+          modes: {
+            repulse: {
+              distance: 100,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+
     <section id="services">
       <h2>Our Services</h2>
     </section>
@@ -129,7 +264,7 @@
       <!-- 1st Column: Subscribe Section -->
       <div class="footer-column">
         <img src="./assets/jeglogo-white.png" alt="Company Logo" class="logo" />
-        <h1>Subscribe now</h1>
+        <h1>Stay updated!</h1>
         <form class="subscribe-form">
           <input type="email" placeholder="Enter your email" required />
           <button type="submit">Subscribe</button>
