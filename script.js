@@ -36,3 +36,34 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 1000, // Animation duration (ms)
+    once: true, // Animation only happens once
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+  const successModal = document.getElementById("successModal");
+  const closeModal = document.getElementById("closeModal");
+
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Validate Captcha
+    const captcha = document.getElementById("captcha");
+    if (!captcha.checked) {
+      alert("Please confirm you are not a robot.");
+      return;
+    }
+
+    // Success Modal
+    successModal.classList.add("visible");
+  });
+
+  closeModal.addEventListener("click", () => {
+    successModal.classList.remove("visible");
+  });
+});
