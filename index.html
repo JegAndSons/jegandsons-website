@@ -28,14 +28,24 @@
             class="scrolled-logo"
           />
         </div>
+      
+        <!-- Hamburger Menu for Mobile View -->
+        <div class="hamburger-menu-container">
+          <div class="hamburger-menu" id="hamburger-menu"> <span></span>
+            <span></span>
+            <span></span></div> <!-- Hamburger icon -->
+        </div>
+  
+      
         <!-- Navigation Items on the Right -->
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
           <a href="#home">HOME</a>
           <a href="#about">ABOUT</a>
-          <a href="#services">SERVICES</a>
-          <a href="#contact" class="btn-contact">CONTACT JEG</a>
+          <a href="#our-services">SERVICES</a>
+          <a href="#contact-us" class="btn-contact">CONTACT JEG</a>
         </div>
       </nav>
+      
     </header>
     <!-- Home Section -->
 
@@ -56,8 +66,8 @@
           </div>
           <div class="vertical-line"></div>
           <div class="stat">
-            <h3>50</h3>
-            <p>Top Amazon<br />Seller</p>
+            <h3>Top</h3>
+            <p>Seller on<br>Amazon</p>
           </div>
           <div class="vertical-line"></div>
           <div class="stat">
@@ -68,7 +78,7 @@
       </div>
     </section>
 
-    <section class="about-jeg">
+    <section id="about" class="about-jeg">
       <div class="about-jeg-container">
         <h1 class="about-jeg-title">ABOUT JEG & Sons</h1>
         <p class="about-jeg-intro">
@@ -141,219 +151,124 @@
     <!-- Mission and Vision Section -->
     <section id="mission-vision">
       <div class="mission-vision-container">
-        <!-- Left Column for Vision -->
-        <div class="vision-column" data-aos="fade-right">
-          <h2>VISION</h2>
-          <h3>Complete Supply Chain Expert</h3>
-          <p>
-            An industry-leading supply chain expert recognized for its strategy,
-            creativity, and relationships.
-          </p>
-        </div>
-
-        <!-- Right Column for Mission -->
-        <div class="mission-column" data-aos="fade-left">
-          <h2>MISSION</h2>
-          <h3>Supply Chain Reimagined</h3>
-          <p>
-            We are a best-in-class supply chain expert leveraging our expertise
-            to create opportunities and abundance for our partners, our
-            communities, and ourselves.
-          </p>
-        </div>
-      </div>
-
-      <!-- JEG Values Section -->
-      <div class="jeg-values-container">
-        <h2 class="jeg-values-title">JEG Values</h2>
-        <div class="jeg-values-columns">
-          <!-- Left Column -->
-          <div class="jeg-values-column">
-            <ul>
-              <li>
-                <h3>Commitment to Growing</h3>
-                <p>
-                  We invest in the growth of our people. Recognizing we are the
-                  vessel for God’s blessings, our people invest in themselves
-                  too. We are responsible and accountable. We embrace the
-                  discomfort of trying something new.
-                </p>
-              </li>
-              <li>
-                <h3>Mission First</h3>
-                <p>
-                  We are one team; one company unit driving our common company
-                  mission. Though we value winning and giving recognition, these
-                  are important only in service to our mission.
-                </p>
-              </li>
-            </ul>
+        <!-- Left Column for Vision and Mission -->
+        <div class="vision-mission-column">
+          <div class="vision" data-aos="fade-right">
+            <h2>VISION</h2>
+            <h3>Complete Supply Chain Expert</h3>
+            <p>
+              An industry-leading supply chain expert recognized for its strategy,
+              creativity, and relationships.
+            </p>
           </div>
-
-          <!-- Right Column -->
-          <div class="jeg-values-column">
-            <ul>
-              <li>
-                <h3>Service Leadership</h3>
-                <p>
-                  We retain our humility at all times and respect all positions
-                  and team members. Our leaders exist to support our team
-                  delivering results. We remember to have fun, not taking
-                  ourselves too seriously.
-                </p>
-              </li>
-              <li>
-                <h3>Results Driven</h3>
-                <p>
-                  We make stuff happen versus wanting or wishing it into being.
-                  We consistently drive to create more. We look for problems
-                  before they arise. We present a solution for any problem we
-                  see.
-                </p>
-              </li>
-            </ul>
-            <em
-              >JEG & Sons, Inc. Employee Handbook Document No. QCD-033 | Rev v.
-              4</em
-            >
+          <div class="mission" data-aos="fade-left">
+            <h2>MISSION</h2>
+            <h3>Supply Chain Reimagined</h3>
+            <p>
+              We are a best-in-class supply chain expert leveraging our expertise
+              to create opportunities and abundance for our partners, our
+              communities, and ourselves.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Particle.js Script -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      particlesJS("mission-vision", {
-        particles: {
-          number: {
-            value: 80,
-            density: {
-              enable: true,
-              value_area: 800,
-            },
-          },
-          color: {
-            value: "#f77c00", // Orange color for particles
-          },
-          shape: {
-            type: "circle",
-            stroke: {
-              width: 0,
-              color: "#000000",
-            },
-          },
-          opacity: {
-            value: 0.5,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.1,
-              sync: false,
-            },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 4,
-              size_min: 0.1,
-              sync: false,
-            },
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#f77c00", // Orange color for lines
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-              enable: false,
-            },
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "repulse",
-            },
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-          modes: {
-            repulse: {
-              distance: 100,
-              duration: 0.4,
-            },
-            push: {
-              particles_nb: 4,
-            },
-          },
-        },
-        retina_detect: true,
-      });
-    </script>
-
-    <section id="services">
-      <div class="services-banner">
-        <h2>Our Services</h2>
+        <div class="custom-vertical-line"></div>
+        <!-- Right Column for JEG Values -->
+<div class="jeg-values-column">
+  <h2 class="jeg-values-title">JEG Values</h2>
+  <div class="jeg-values-container">
+    <ul>
+      <li>
+        <h3>Commitment to Growing</h3>
         <p>
-          Empowering Your Business Journey: From Seamless Channel Management to
-          Optimized Order Fulfillment and High-Volume Trade Solutions, JEG
-          Delivers Excellence Across Every Step.
+          We invest in the growth of our people. Recognizing we are the
+          vessel for God’s blessings, our people invest in themselves
+          too. We are responsible and accountable. We embrace the
+          discomfort of trying something new.
         </p>
-      </div>
-      <div class="services-grid">
-        <div class="service-column">
-          <div class="icon">
-            <i class="fa-solid fa-box"></i>
+      </li>
+      <li>
+        <h3>Mission First</h3>
+        <p>
+          We are one team; one company unit driving our common company
+          mission. Though we value winning and giving recognition, these
+          are important only in service to our mission.
+        </p>
+      </li>
+      <li>
+        <h3>Service Leadership</h3>
+        <p>
+          We retain our humility at all times and respect all positions
+          and team members. Our leaders exist to support our team
+          delivering results. We remember to have fun, not taking
+          ourselves too seriously.
+        </p>
+      </li>
+      <li>
+        <h3>Results Driven</h3>
+        <p>
+          We make stuff happen versus wanting or wishing it into being.
+          We consistently drive to create more. We look for problems
+          before they arise. We present a solution for any problem we
+          see.
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    </section>
+    
+
+    <section id="our-services">
+      <div class="services-container">
+        <h2>Our Services</h2>
+        <p class="intro-text">
+          Discover our range of professional services designed to streamline your business operations.
+        </p>
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-box"></i> <!-- First icon -->
+            </div>
+            <img src="./assets/jegcommercelogo.png" alt="Worry-Free E-Commerce" />
+            <h3>WORRY-FREE E-COMMERCE</h3>
+            <p>
+              Covers all aspects of channel management; account and electronic integration, product listing, product content optimization and cross channel pricing management.
+            </p>
+            </br>
+            <p>JEG’s Commercial Services takes care of all aspects of channel management including: account and electronic integration, product listing, product content optimization and cross channel pricing management.</p>
           </div>
-          <h3>JEG Commerce</h3>
-          <p>
-            JEG’s Commercial Services takes care of all aspects of channel
-            management including: account and electronic integration, product
-            listing, product content optimization, and cross-channel pricing
-            management.
-          </p>
-        </div>
-        <div class="service-column">
-          <div class="icon">
-            <i class="fa-solid fa-truck-fast"></i>
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-truck-fast"></i> <!-- Second icon -->
+            </div>
+            <img src="./assets/jeg3pllogo.png" alt="Integrated Logistics" />
+            <h3>INTEGRATED LOGISTICS</h3>
+            <p>
+              Our Enhanced 3PL service, ensures optimal product availability, fast order management, prompt shipments and efficient management of returned products.
+            </p>
+            <br>
+            <p>Our Enhanced 3PL service, ensures optimal product availability, fast order management, prompt shipments and efficient management of returned products.</p>
           </div>
-          <h3>JEG 3PL</h3>
-          <p>
-            Our Enhanced 3PL service ensures optimal product availability, fast
-            order management, prompt shipments, and efficient management of
-            returned products.
-          </p>
-        </div>
-        <div class="service-column">
-          <div class="icon">
-            <i class="fa-solid fa-handshake"></i>
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-handshake"></i> <!-- Third icon -->
+            </div>
+            <img src="./assets/jegtrade.png" alt="Product Distribution" />
+            <h3>PRODUCT DISTRIBUTION</h3>
+            <p>
+              Leading technology distributor of IT and electronics products, offering end-to-end solutions for today’s resellers and retailers.
+            </p>
+            <br>
+            <p>Our traditional distribution business buys and sells high volume electronics and accessories.</p>
           </div>
-          <h3>JEG Trade</h3>
-          <p>
-            Our traditional distribution business buys and sells high-volume
-            electronics and accessories.
-          </p>
         </div>
       </div>
     </section>
+    
 
     <section id="contact-us" class="contact-section">
       <div class="contact-container">
@@ -396,6 +311,7 @@
       </div>
     </section>
   </body>
+  <div class="divider-line"></div>
 
   <footer class="footer">
     <div class="footer-content">

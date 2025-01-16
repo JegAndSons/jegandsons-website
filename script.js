@@ -7,7 +7,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Scroll Event Listener for Milestone Animations
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY + window.innerHeight;
   const milestoneItems = document.querySelectorAll(".about-jeg-milestones li");
@@ -23,14 +22,10 @@ function goToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Select the navbar
 const navbar = document.querySelector("nav");
 
-// Add a scroll event listener
 window.addEventListener("scroll", () => {
-  // Check if the page has been scrolled down
   if (window.scrollY > 50) {
-    // You can change 50 to any other value based on when you want the logo change
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
@@ -39,8 +34,8 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
-    duration: 1000, // Animation duration (ms)
-    once: true, // Animation only happens once
+    duration: 1000, 
+    once: true, 
   });
 });
 
@@ -52,14 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Validate Captcha
     const captcha = document.getElementById("captcha");
     if (!captcha.checked) {
       alert("Please confirm you are not a robot.");
       return;
     }
 
-    // Success Modal
     successModal.classList.add("visible");
   });
 
@@ -67,3 +60,59 @@ document.addEventListener("DOMContentLoaded", () => {
     successModal.classList.remove("visible");
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const valuesColumns = document.querySelectorAll('.jeg-values-column');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    threshold: 0.5 
+  });
+
+  valuesColumns.forEach(column => {
+    observer.observe(column); 
+  });
+});
+
+// JavaScript for smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+// Get the hamburger menu, nav links, and their container
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.getElementById('nav-links');
+const hamburgerMenuContainer = document.querySelector('.hamburger-menu-container');
+
+// Function to handle hamburger menu toggle on click
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+// Function to handle scroll event
+function handleScroll() {
+  if (window.scrollY > 50) { // Adjust threshold as needed
+    hamburgerMenu.classList.add('scrolled');
+    hamburgerMenuContainer.classList.add('scrolled');
+  } else {
+    hamburgerMenu.classList.remove('scrolled');
+    hamburgerMenuContainer.classList.remove('scrolled');
+  }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
