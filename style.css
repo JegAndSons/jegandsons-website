@@ -108,18 +108,19 @@ nav.scrolled .logo .default-logo {
   display: flex;
   width: 90%;
   max-width: 2000px;
-  height: 80%;
+  height: auto;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 20px;
+  flex-direction: column; /* Adjusted for vertical alignment of text and stats */
 }
 
 /* Left Column (Text) */
 .home-text {
-  flex: 1;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 40px; /* Added spacing below text for stats */
 }
 
 .home-text h1 {
@@ -146,6 +147,40 @@ nav.scrolled .logo .default-logo {
 
 .home-text p {
   font-size: 2.2rem;
+}
+
+.home-statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+}
+
+.stat {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  flex: 1; /* Distributes stats evenly across the container */
+  min-width: 100px; /* Ensures minimum size for smaller screens */
+}
+
+.stat h3 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #ffffff, transparent);
+  align-self: center; /* Aligns the vertical line properly */
 }
 
 /* General Styles */
