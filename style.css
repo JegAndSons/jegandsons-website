@@ -501,6 +501,42 @@ nav.scrolled .hamburger-menu {
   transform: translateY(0);
 }
 
+.about-jeg-milestones .text::before {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.3s ease;
+}
+
+.about-jeg-milestones li:hover .text::before {
+  left: 100%;
+  transition: left 0.6s ease-in-out;
+}
+
+/* Glimmering effect */
+@keyframes glimmer {
+  0% {
+    background-color: #ff6600;
+    box-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600;
+  }
+  50% {
+    background-color: #ff8533;
+    box-shadow: 0 0 15px #ff8533, 0 0 25px #ff8533, 0 0 35px #ff8533;
+  }
+  100% {
+    background-color: #ff6600;
+    box-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600;
+  }
+}
+
+/* Apply glimmering effect on hover */
+.about-jeg-milestones li:hover {
+  animation: glimmer 1.5s infinite ease-in-out;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .home-container {
@@ -923,17 +959,100 @@ nav.scrolled .hamburger-menu {
 }
 
 .contact-image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-image img {
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   height: auto;
   animation: fadeInLeft 1s ease;
+  display: block;
+  z-index: 1; /* Keeps the image above the background animation */
+}
+
+.contact-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #242651 100%);
+  pointer-events: none;
+  z-index: 2; /* Gradient above animation but below the image */
+}
+
+.chat-bubble {
+  position: absolute;
+  top: 20px; /* Keeps it closer to the top */
+  right: 200px; /* Moved it closer to the image */
+  background-color: #ed771e; /* Orange bubble */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 3; /* Ensures bubble is above the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatBubble 3s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* Position the tail */
+  left: 20px; /* Tail positioned at the bottom left inside the bubble */
+  border-left: 15px solid transparent; /* Left side of the tail */
+  border-right: 15px solid transparent; /* Right side of the tail */
+  border-top: 30px solid #ed771e; /* The actual triangle shape for the tail */
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(10px);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .chat-bubble {
+    top: 10px; /* Slightly adjust the position on smaller screens */
+    right: 10px; /* Keep it in the upper right corner */
+    font-size: 16px; /* Smaller text for mobile */
+    padding: 12px 15px; /* Adjust padding */
+  }
+
+  .contact-image {
+    padding-right: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-bubble {
+    top: 5px; /* Even closer to the top on very small screens */
+    right: 10px; /* Keep it aligned to the right */
+    font-size: 14px; /* Smaller text for very small screens */
+    padding: 10px 12px; /* Further adjust padding */
+  }
+
+  .contact-image {
+    padding-right: 5px; /* Adjust padding for very small screens */
+  }
 }
 
 .contact-form {
