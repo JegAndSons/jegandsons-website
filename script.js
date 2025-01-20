@@ -91,28 +91,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-
-// Get the hamburger menu, nav links, and their container
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navLinks = document.getElementById('nav-links');
-const hamburgerMenuContainer = document.querySelector('.hamburger-menu-container');
 
-// Function to handle hamburger menu toggle on click
-hamburgerMenu.addEventListener("click", () => {
-  hamburgerMenu.classList.toggle("active");
-  navLinks.classList.toggle("active");
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active');
+  navLinks.classList.toggle('active');
 });
-
-// Function to handle scroll event
-function handleScroll() {
-  if (window.scrollY > 50) { // Adjust threshold as needed
-    hamburgerMenu.classList.add('scrolled');
-    hamburgerMenuContainer.classList.add('scrolled');
-  } else {
-    hamburgerMenu.classList.remove('scrolled');
-    hamburgerMenuContainer.classList.remove('scrolled');
-  }
-}
-
-// Add scroll event listener
-window.addEventListener('scroll', handleScroll);
