@@ -64,7 +64,7 @@ nav.scrolled {
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 10px 10px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -74,15 +74,61 @@ nav.scrolled {
 }
 
 .nav-links .btn-contact {
-  background-color: #ff6600;
+  position: relative;
+  display: inline-block;
+  background-color: #ff6600; /* Base button color */
   color: white;
   font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensures the shine effect stays within the button */
 }
 
 .nav-links .btn-contact:hover {
-  background-color: #ed771e;
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
+}
+
+/* Shiny animation effect */
+.nav-links .btn-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.3s;
+}
+
+.nav-links .btn-contact:hover::before {
+  left: 100%; /* Slide from left to right */
+  transition: left 0.6s ease-in-out;
+}
+
+/* Glimmering animation effect */
+@keyframes glimmer {
+  0% {
+    background-color: #ff6600;
+    box-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600;
+  }
+  50% {
+    background-color: #ff8533;
+    box-shadow: 0 0 15px #ff8533, 0 0 25px #ff8533, 0 0 35px #ff8533;
+  }
+  100% {
+    background-color: #ff6600;
+    box-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600;
+  }
+}
+
+.nav-links .btn-contact:hover {
+  animation: glimmer 1.5s infinite ease-in-out; /* Adds the glimmering effect */
 }
 
 nav .logo img {
@@ -126,17 +172,27 @@ nav.scrolled .hamburger-menu {
 
 /* Active Hamburger State */
 .hamburger-menu.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(7px);
+  transform: rotate(45deg) translate(5px, 5px); /* Adjusted to align better */
 }
 
 .hamburger-menu.active span:nth-child(2) {
-  opacity: 0;
+  opacity: 0; /* Hides the middle line */
 }
 
 .hamburger-menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-7px);
+  transform: rotate(-45deg) translate(5px, -5px); /* Adjusted to align better */
 }
 
+/* Ensure hamburger menu is above nav items */
+.hamburger-menu {
+  position: relative; /* Maintain relative positioning */
+  z-index: 10; /* Place above other elements */
+}
+
+/* Ensure nav links don’t overlap the hamburger menu */
+.nav-links {
+  z-index: 1; /* Set lower than the hamburger menu */
+}
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .nav-links {
