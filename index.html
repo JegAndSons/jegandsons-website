@@ -1,398 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JEG & Sons</title>
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-    
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    
-    <!-- EmailJS Script -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />    <link href="https://fonts.googleapis.com/css2?family=Roboto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <!-- Left Most: Logo -->
+            <div class="logo">
+                <img
+                    src="./assets/jegandsons-logo.png"
+                    alt="JEG & Sons Logo"
+                    class="default-logo"
+                />
+            </div>
 
-    <link rel="stylesheet" href="style.css" />
+            <!-- Center: Navbar Links -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact JEG</a></li>
+            </ul>
 
-    <style>
-      body {
-          font-family: 'Roboto Flex', sans-serif;
-          font-weight: 500;
-      }
-  </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <!-- Company Logo on the Left -->
-        <div class="logo">
-          <img
-            src="./assets/jegandsons-logo.png"
-            alt="JEG & Sons Logo"
-            class="default-logo"
-          />
-          <img
-            src="./assets/jeglogo-white.png"
-            alt="JEG & Sons Logo"
-            class="scrolled-logo"
-          />
-        </div>
-        <div class="hamburger-menu-container">
-          <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <!-- Navigation Items on the Right -->
-        <div class="nav-links" id="nav-links">
-          <a href="#home">HOME</a>
-          <a href="#about">ABOUT</a>
-          <a href="#our-services">SERVICES</a>
-          <a href="#contact-us" class="btn-contact">CONTACT JEG</a>
-        </div>
-      </nav>
-      
+            <!-- Right Most: Customer Login -->
+            <a href="#" class="customer-login">Customer Login</a>
+        </nav>
+        <header class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>E-COMMERCE SIMPLIFIED.</h1>
+                    <p>
+                        Get the freedom to focus on product development<br>
+                        and brand management, leave the rest to us.
+                    </p>
+                    <p>
+                        We are disrupting our industry by making it easier for our clients to develop their business and fuel profitability with US e-tailers and retailers.
+                    </p>
+                    <div class="stats">
+                        <div>
+                            <h2>40+</h2>
+                            <p>Integrated<br>Channels</p>
+                        </div>
+                        <div>
+                            <h2>5000+</h2>
+                            <p>Active<br>Products</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-images">
+                    <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Image 1" class="small-image small-image-top">
+                    <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Large Image" class="large-image">
+                    <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Image 3" class="small-image small-image-bottom">
+                </div>
+            </div>
     </header>
-    <!-- Home Section -->
 
-    <section id="home">
-      <div class="home-container">
-        <!-- Left Column (Text) -->
-        <div class="home-text">
-          <h1>E-COMMERCE SIMPLIFIED.</h1>
-          <p>
-            Get the freedom to focus on product development<br />
-            and brand management, leave the rest to us.
-          </p>
-        </div>
-        <div class="home-statistics">
-          <div class="stat">
-            <h3>40+</h3>
-            <p>Integrated<br />Channels</p>
+    <section id="about">
+        <div class="container">
+          <div class="about-jeg">
+            <div class="about-jeg-container">
+              <!-- First Row: First Column -->
+              <div class="about-jeg-text">
+                <div class="playful-elements">
+                  <h2>How JEG & SONS Powers Your Growth</h2>
+                </div>
+              </div>
+      
+              <!-- First Row: Second Column -->
+              <div class="about-jeg-description">
+                <p>We are disrupting our industry by making it easier for our clients to develop their business and fuel profitability with US e-tailers and retailers.</p>
+                <p>JEG allows manufacturers to increase their sales by accessing multiple sales channels, with little or no upfront costs. With JEG managing all aspects of your business, you are free to focus on what makes your company more competitive.</p>
+              </div>
+              
+            </div>
+            <div class="container-box">
+                <div class="card">
+                  <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                      <div class="imgBox">
+                        <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Trust & Co.">
+                      </div>
+                      <div class="icon">
+                        <a href="#" class="iconBox">
+                          <span class="material-symbols-outlined">
+                            inventory
+                          </span>
+                        </a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="content">
+                    <h3>Quality</h3>
+                    <p>We provide reliable services and top-notch products to meet your needs.</p>
+                </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner" style="--clr:#fff;">
+                      <div class="box">
+                        <div class="imgBox">
+                          <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Trust & Co.">
+                        </div>
+                        <div class="icon">
+                          <a href="#" class="iconBox"> <span class="material-symbols-outlined">
+                              arrow_outward
+                            </span></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <h3>Support</h3>
+                      <p>We offer 24/7 support to help and assist you with any inquiries.</p>
+                    </div>
+                  </div>
+                <div class="card">
+                  <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                      <div class="imgBox">
+                        <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Tonic">
+                      </div>
+                      <div class="icon">
+                        <a href="#" class="iconBox">
+                          <span class="material-symbols-outlined">
+                            language
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <h3>Fast Delivery</h3>
+                    <p>Our efficient delivery system ensures that your order arrives on time.</p>
+                </div>
+                </div>
+                <div class="card">
+                  <div class="card-inner" style="--clr:#fff;">
+                    <div class="box">
+                      <div class="imgBox">
+                        <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Shower Gel">
+                      </div>
+                      <div class="icon">
+                        <a href="#" class="iconBox">
+                          <span class="material-symbols-outlined">
+                            delivery_dining
+                          </span>
+                        </a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="content">
+                    <h3>Eco-friendly</h3>
+                    <p>We are committed to sustainable and eco-friendly practices.</p>
+                </div>
+                </div>
+              </div>
           </div>
           
-          <div class="vertical-line"></div>
-          <div class="stat">
-            <h3>5000+</h3>
-            <p>Active<br />Products</p>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="about ">
-      <div class="about-jeg montserrat-text">
-        <div class="about-jeg-container">
-          <!-- Left Column: Text -->
-          <div class="about-jeg-text montserrat-text">
-            <h2>ABOUT JEG & SONS</h2>
-            
-          <p class="montserrat-text">We are disrupting our industry by making it easier for our clients to develop their business and fuel profitability with US e-tailers and retailers.</p>
-            <p class="montserrat-text">JEG allows manufacturers to increase their sales by accessing multiple sales channels, with little or no upfront costs. With JEG managing all aspects of your business, you are free to focus on what makes your company more competitive.</p>
-            <button class="contact-btn">Contact Us</button>
-          </div>
-    
-          <!-- Right Column: Boxes -->
-          <div class="about-jeg-boxes montserrat-text">
-            <div class="box roboto-text">
-              <div class="box-header roboto-text">
-                <i class="icon icon-1 fa fa-cogs"></i>
-                <span>Quality Service</span>
-              </div>
-              <p>We provide reliable services and top-notch products to meet your needs.</p>
-            </div>
-            <div class="box">
-              <div class="box-header">
-                <i class="icon icon-2 fa fa-truck"></i>
-                <span>Fast Delivery</span>
-              </div>
-              <p>Our efficient delivery system ensures that your order arrives on time.</p>
-            </div>
-            <div class="box">
-              <div class="box-header">
-                <i class="icon icon-3 fa fa-users"></i>
-                <span>Customer Support</span>
-              </div>
-              <p>We offer 24/7 support to assist you with any inquiries.</p>
-            </div>
-            <div class="box">
-              <div class="box-header">
-                <i class="icon icon-4 fa fa-leaf"></i>
-                <span>Eco-friendly</span>
-              </div>
-              <p>We are committed to sustainable and eco-friendly practices.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-            
-
-    
-
-    <section id="mission-vision-carousel">
-      <div id="mission-vision">
-        <div class="mission-vision-box">
-          <div class="tabs-container">
-            <button class="tab active">MISSION</button>
-            <button class="tab">VISION</button>
-            <button class="tab">JEG VALUES</button>
-          </div>
-          <div class="tab-content active">
-            <!-- First Column: Text -->
-            <div class="text-container">
-              <h2>MISSION</h2>
-              <h3>Supply Chain Reimagined</h3>
-              <p>
-                We are a best-in-class supply chain expert leveraging our expertise
-                to create opportunities and abundance for our partners, our
-                communities, and ourselves.
-              </p>
-            </div>
-            <div class="icon-container">
-              <i class="fas fa-globe"></i> 
-            </div>
-
-            <div class="tab-content active">
-              <!-- First Column: Text -->
-              <div class="text-container">
-                <h2>VISION</h2>
-                <h3>Complete Supply Chain Expert</h3>
-                <p>
-                  An industry-leading supply chain expert recognized for its strategy,
-              creativity, and relationships.
-                </p>
-              </div>
-              <div class="icon-container">
-                <i class="fas fa-globe"></i> 
-              </div>
-
-              <div class="tab-content active">
-                <!-- First Column: Text -->
-                <div class="text-container">
-                  <h2>JEG Values</h2>
-                  <ul>
-                    <li>
-                      <h3>Commitment to Growing</h3>
-                      <p>
-                        We invest in the growth of our people. Recognizing we are the
-                        vessel for God’s blessings, our people invest in themselves
-                        too. We are responsible and accountable. We embrace the
-                        discomfort of trying something new.
-                      </p>
-                    </li>
-                    <li>
-                      <h3>Mission First</h3>
-                      <p>
-                        We are one team; one company unit driving our common company
-                        mission. Though we value winning and giving recognition, these
-                        are important only in service to our mission.
-                      </p>
-                    </li>
-                    <li>
-                      <h3>Service Leadership</h3>
-                      <p>
-                        We retain our humility at all times and respect all positions
-                        and team members. Our leaders exist to support our team
-                        delivering results. We remember to have fun, not taking
-                        ourselves too seriously.
-                      </p>
-                    </li>
-                    <li>
-                      <h3>Results Driven</h3>
-                      <p>
-                        We make stuff happen versus wanting or wishing it into being.
-                        We consistently drive to create more. We look for problems
-                        before they arise. We present a solution for any problem we
-                        see.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="icon-container">
-                  <i class="fas fa-globe"></i> 
-                </div>
-        </div>
-      </div>
+      </section>
       
-      
+
+    <section class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Feature One</h3>
+                    <p>Details about this feature and how it helps users.</p>
+                </div>
+                <div class="card">
+                    <h3>Feature Two</h3>
+                    <p>Details about this feature and how it helps users.</p>
+                </div>
+                <div class="card">
+                    <h3>Feature Three</h3>
+                    <p>Details about this feature and how it helps users.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    
-        
-    
+</body>
 
-    <section id="our-services">
-      <div class="services-container">
-        <h2>Our Services</h2>
-        <p class="intro-text">
-          Discover our range of professional services designed to streamline your business operations.
-        </p>
-        <div class="services-grid">
-          <!-- Service 1 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-box"></i> <!-- First icon -->
+<footer class="footer">
+    <div class="container">
+        <!-- 1st Column: Company Info -->
+        <div class="footer-column">
+            <div class="footer-logo">
+                <img src="./assets/jegandsons-logo.png" alt="Company Logo" />
             </div>
-            <img src="./assets/jegcommercelogo.png" alt="Worry-Free E-Commerce" />
-            <h3>WORRY-FREE E-COMMERCE</h3>
-            <p>
-              Covers all aspects of channel management; account and electronic integration, product listing, product content optimization and cross channel pricing management.
-            </p>
-            </br>
-            <p>JEG’s Commercial Services takes care of all aspects of channel management including: account and electronic integration, product listing, product content optimization and cross channel pricing management.</p>
-          </div>
-          <!-- Service 2 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-truck-fast"></i> <!-- Second icon -->
-            </div>
-            <img src="./assets/jeg3pllogo.png" alt="Integrated Logistics" />
-            <h3>INTEGRATED LOGISTICS</h3>
-            <p>
-              Our Enhanced 3PL service, ensures optimal product availability, fast order management, prompt shipments and efficient management of returned products.
-            </p>
-            <br>
-            <p>Our Enhanced 3PL service, ensures optimal product availability, fast order management, prompt shipments and efficient management of returned products.</p>
-          </div>
-          <!-- Service 3 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fa-solid fa-handshake"></i> <!-- Third icon -->
-            </div>
-            <img src="./assets/jegtrade.png" alt="Product Distribution" />
-            <h3>PRODUCT DISTRIBUTION</h3>
-            <p>
-              Leading technology distributor of IT and electronics products, offering end-to-end solutions for today’s resellers and retailers.
-            </p>
-            <br>
-            <p>Our traditional distribution business buys and sells high volume electronics and accessories.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-    <section id="contact-us" class="contact-section">
-      <div class="contact-container">
-        <!-- Left Column: Image -->
-        <div class="contact-image">
-          <img src="./assets/support.png" alt="Contact Clipart" />
-          <div class="chat-bubble">
-            Got some questions?
-          </div>
+            <h1>Stay Connected</h1>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">Subscribe</button>
+            </form>
         </div>
 
-        <!-- Right Column: Form -->
-        <div class="contact-form">
-          <h2>Contact Us</h2>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Name*</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email*</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="company">Company Name (Optional)</label>
-              <input type="text" id="company" name="company" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message*</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Send Message</button>
-          </form>
+        <!-- 2nd Column: Contact Us -->
+        <div class="footer-column">
+            <h1>Contact Us</h1>
+            <p><i class="fas fa-envelope"></i> info@company.com</p>
+            <p><i class="fas fa-phone-alt"></i> +1 (305) 654 7555</p>
+            <p><i class="fas fa-globe"></i> 20000 NE 15th Ct, Miami, FL 33179</p>
+            
         </div>
-      </div>
 
-      <!-- Success Modal -->
-      <div id="successModal" class="modal hidden">
-        <div class="modal-content">
-          <p>Thank you! Your message has been sent successfully.</p>
-          <button id="closeModal">Close</button>
+        <!-- 3rd Column: Quick Links -->
+        <div class="footer-column">
+            <h1>Quick Links</h1>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Blog</a>
         </div>
-      </div>
-    </section>
-  </body>
-  <div class="divider-line"></div>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <!-- 1st Column: Subscribe Section -->
-      <div class="footer-column">
-        <img src="./assets/jeglogo-white.png" alt="Company Logo" class="logo" />
-        <h1>Stay updated!</h1>
-        <form class="subscribe-form">
-          <input type="email" placeholder="Enter your email" required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-
-      <!-- 2nd Column: Contact Us Section -->
-      <div class="footer-column">
-        <h1>Contact Us</h1>
-        <ul>
-          <li><i class="fas fa-envelope"></i> info@jegsons.com</li>
-          <li><i class="fas fa-phone-alt"></i> +1 (305) 654 7555</li>
-          <li>
-            <i class="fas fa-globe"></i> 20000 NE 15th Ct, Miami, FL 33179
-          </li>
-        </ul>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/jegandsons/" class="social-icon"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/company/jegsons3pl/"
-            class="social-icon"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <!-- 4th Column: Helpful Information -->
+        <div class="footer-column">
+            <h1>Helpful Information</h1>
+            <a href="#">Careers</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-      </div>
-
-      <!-- 3rd Column: Helpful Links Section -->
-      <div class="footer-column">
-        <h1>Helpful Links</h1>
-        <ul>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- 4th Column: Information Section -->
-      <div class="footer-column">
-        <h1>Information</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#our-services">Services</a></li>
-          <li><a href="#contact-us">Contact JEG</a></li>
-        </ul>
-      </div>
     </div>
-
+    
     <!-- Back to Top Button -->
-    <button class="back-to-top" onclick="goToTop()">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-  </footer>
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+</footer>
 
-  <script
-    src="https://kit.fontawesome.com/2dbb01b8f7.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="config.js"></script>
-  <script src="./script.js"></script>
 </html>
