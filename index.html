@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JEG & Sons</title>
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- EmailJS Script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+          font-family: 'Roboto Flex', sans-serif;
+          font-weight: 500;
+      }
+  </style>
   </head>
   <body>
     <header>
@@ -63,11 +77,7 @@
             <h3>40+</h3>
             <p>Integrated<br />Channels</p>
           </div>
-          <div class="vertical-line"></div>
-          <div class="stat">
-            <h3>Top</h3>
-            <p>Seller on<br>Amazon</p>
-          </div>
+          
           <div class="vertical-line"></div>
           <div class="stat">
             <h3>5000+</h3>
@@ -77,145 +87,146 @@
       </div>
     </section>
 
-    <section id="about" class="about-jeg">
-      <div class="about-jeg-container">
-        <h1 class="about-jeg-title">ABOUT JEG & Sons</h1>
-        <p class="about-jeg-intro">
-          We are disrupting our industry by making it easier for our clients to
-          develop their business and fuel profitability with US e-tailers and
-          retailers.
-        </p>
-        <p class="about-jeg-description">
-          JEG allows manufacturers to increase their sales by accessing multiple
-          sales channels, with little or no upfront costs. With JEG managing all
-          aspects of your business, you are free to focus on what makes your
-          company more competitive.
-        </p>
-        <p class="about-jeg-history">
-          For the past 10 years JEG has enjoyed tremendous success selling
-          online. Our investment in technology and know-how has allowed us to
-          reach multiple milestones and places us at the very front of the
-          eCommerce industry:
-        </p>
-        <ul class="about-jeg-milestones">
-          <li>
-            <div class="icon">
-              <i class="fa fa-amazon fa-4x" aria-hidden="true"></i>
-            </div>
-            <div class="slicer"></div>
-            <div class="text">
-              <span>Ranked among the Top 50 Sellers on Amazon.com</span>
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
-            </div>
-            <div class="slicer"></div>
-            <div class="text">
-              <span
-                >Established commercial relationships with top retailers and
-                sales platforms</span
-              >
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <i class="fa fa-truck fa-3x" aria-hidden="true"></i>
-            </div>
-            <div class="slicer"></div>
-            <div class="text">
-              <span
-                >A state-of-the-art distribution distribution center that offers
-                same-day shipping to your customer's door.</span
-              >
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <i class="fa fa-link fa-3x" aria-hidden="true"></i>
-            </div>
-            <div class="slicer"></div>
-            <div class="text">
-              <span
-                >EDI integration with E-commerce’s largest channels for seamless
-                and reliable order management</span
-              >
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Mission and Vision Section -->
-    <section id="mission-vision">
-      <div class="mission-vision-container">
-        <!-- Left Column for Vision and Mission -->
-        <div class="vision-mission-column">
-          <div class="vision" data-aos="fade-right">
-            <h2>VISION</h2>
-            <h3>Complete Supply Chain Expert</h3>
-            <p>
-              An industry-leading supply chain expert recognized for its strategy,
-              creativity, and relationships.
-            </p>
+    <section id="about ">
+      <div class="about-jeg montserrat-text">
+        <div class="about-jeg-container">
+          <!-- Left Column: Text -->
+          <div class="about-jeg-text montserrat-text">
+            <h2>ABOUT JEG & SONS</h2>
+            
+          <p class="montserrat-text">We are disrupting our industry by making it easier for our clients to develop their business and fuel profitability with US e-tailers and retailers.</p>
+            <p class="montserrat-text">JEG allows manufacturers to increase their sales by accessing multiple sales channels, with little or no upfront costs. With JEG managing all aspects of your business, you are free to focus on what makes your company more competitive.</p>
+            <button class="contact-btn">Contact Us</button>
           </div>
-          <div class="mission" data-aos="fade-left">
-            <h2>MISSION</h2>
-            <h3>Supply Chain Reimagined</h3>
-            <p>
-              We are a best-in-class supply chain expert leveraging our expertise
-              to create opportunities and abundance for our partners, our
-              communities, and ourselves.
-            </p>
+    
+          <!-- Right Column: Boxes -->
+          <div class="about-jeg-boxes montserrat-text">
+            <div class="box roboto-text">
+              <div class="box-header roboto-text">
+                <i class="icon icon-1 fa fa-cogs"></i>
+                <span>Quality Service</span>
+              </div>
+              <p>We provide reliable services and top-notch products to meet your needs.</p>
+            </div>
+            <div class="box">
+              <div class="box-header">
+                <i class="icon icon-2 fa fa-truck"></i>
+                <span>Fast Delivery</span>
+              </div>
+              <p>Our efficient delivery system ensures that your order arrives on time.</p>
+            </div>
+            <div class="box">
+              <div class="box-header">
+                <i class="icon icon-3 fa fa-users"></i>
+                <span>Customer Support</span>
+              </div>
+              <p>We offer 24/7 support to assist you with any inquiries.</p>
+            </div>
+            <div class="box">
+              <div class="box-header">
+                <i class="icon icon-4 fa fa-leaf"></i>
+                <span>Eco-friendly</span>
+              </div>
+              <p>We are committed to sustainable and eco-friendly practices.</p>
+            </div>
           </div>
         </div>
-        <div class="custom-vertical-line"></div>
-        <!-- Right Column for JEG Values -->
-<div class="jeg-values-column">
-  <h2 class="jeg-values-title">JEG Values</h2>
-  <div class="jeg-values-container">
-    <ul>
-      <li>
-        <h3>Commitment to Growing</h3>
-        <p>
-          We invest in the growth of our people. Recognizing we are the
-          vessel for God’s blessings, our people invest in themselves
-          too. We are responsible and accountable. We embrace the
-          discomfort of trying something new.
-        </p>
-      </li>
-      <li>
-        <h3>Mission First</h3>
-        <p>
-          We are one team; one company unit driving our common company
-          mission. Though we value winning and giving recognition, these
-          are important only in service to our mission.
-        </p>
-      </li>
-      <li>
-        <h3>Service Leadership</h3>
-        <p>
-          We retain our humility at all times and respect all positions
-          and team members. Our leaders exist to support our team
-          delivering results. We remember to have fun, not taking
-          ourselves too seriously.
-        </p>
-      </li>
-      <li>
-        <h3>Results Driven</h3>
-        <p>
-          We make stuff happen versus wanting or wishing it into being.
-          We consistently drive to create more. We look for problems
-          before they arise. We present a solution for any problem we
-          see.
-        </p>
-      </li>
-    </ul>
-  </div>
-</div>
-
+      </div>
     </section>
+            
+
+    
+
+    <section id="mission-vision-carousel">
+      <div id="mission-vision">
+        <div class="mission-vision-box">
+          <div class="tabs-container">
+            <button class="tab active">MISSION</button>
+            <button class="tab">VISION</button>
+            <button class="tab">JEG VALUES</button>
+          </div>
+          <div class="tab-content active">
+            <!-- First Column: Text -->
+            <div class="text-container">
+              <h2>MISSION</h2>
+              <h3>Supply Chain Reimagined</h3>
+              <p>
+                We are a best-in-class supply chain expert leveraging our expertise
+                to create opportunities and abundance for our partners, our
+                communities, and ourselves.
+              </p>
+            </div>
+            <div class="icon-container">
+              <i class="fas fa-globe"></i> 
+            </div>
+
+            <div class="tab-content active">
+              <!-- First Column: Text -->
+              <div class="text-container">
+                <h2>VISION</h2>
+                <h3>Complete Supply Chain Expert</h3>
+                <p>
+                  An industry-leading supply chain expert recognized for its strategy,
+              creativity, and relationships.
+                </p>
+              </div>
+              <div class="icon-container">
+                <i class="fas fa-globe"></i> 
+              </div>
+
+              <div class="tab-content active">
+                <!-- First Column: Text -->
+                <div class="text-container">
+                  <h2>JEG Values</h2>
+                  <ul>
+                    <li>
+                      <h3>Commitment to Growing</h3>
+                      <p>
+                        We invest in the growth of our people. Recognizing we are the
+                        vessel for God’s blessings, our people invest in themselves
+                        too. We are responsible and accountable. We embrace the
+                        discomfort of trying something new.
+                      </p>
+                    </li>
+                    <li>
+                      <h3>Mission First</h3>
+                      <p>
+                        We are one team; one company unit driving our common company
+                        mission. Though we value winning and giving recognition, these
+                        are important only in service to our mission.
+                      </p>
+                    </li>
+                    <li>
+                      <h3>Service Leadership</h3>
+                      <p>
+                        We retain our humility at all times and respect all positions
+                        and team members. Our leaders exist to support our team
+                        delivering results. We remember to have fun, not taking
+                        ourselves too seriously.
+                      </p>
+                    </li>
+                    <li>
+                      <h3>Results Driven</h3>
+                      <p>
+                        We make stuff happen versus wanting or wishing it into being.
+                        We consistently drive to create more. We look for problems
+                        before they arise. We present a solution for any problem we
+                        see.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="icon-container">
+                  <i class="fas fa-globe"></i> 
+                </div>
+        </div>
+      </div>
+      
+      
+    </section>
+    
+    
+        
     
 
     <section id="our-services">
@@ -382,5 +393,6 @@
     src="https://kit.fontawesome.com/2dbb01b8f7.js"
     crossorigin="anonymous"
   ></script>
+  <script src="config.js"></script>
   <script src="./script.js"></script>
 </html>
