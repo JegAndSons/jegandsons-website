@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="hero-section">
         <nav class="navbar">
             <!-- Left Most: Logo -->
             <div class="logo">
@@ -23,16 +22,16 @@
 
             <!-- Center: Navbar Links -->
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact JEG</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact JEG</a></li>
             </ul>
 
             <!-- Right Most: Customer Login -->
             <a href="#" class="customer-login">Customer Login</a>
         </nav>
-        <header class="hero-section">
+        <header class="hero-section" id="home">
             <div class="container hero-container">
                 <div class="hero-text">
                     <h1>E-COMMERCE SIMPLIFIED.</h1>
@@ -68,9 +67,7 @@
             <div class="about-jeg-container">
               <!-- First Row: First Column -->
               <div class="about-jeg-text">
-                <div class="playful-elements">
                   <h2>How JEG & SONS Powers Your Growth</h2>
-                </div>
               </div>
       
               <!-- First Row: Second Column -->
@@ -173,8 +170,8 @@
 
 
 
-      <section class="section-services">
-        <div class="container-services">
+      <section class="section-services" id="services">
+        <div class="container">
           <!-- Header Section -->
           <div class="about-jeg-container">
             <!-- First Row: First Column -->
@@ -188,9 +185,7 @@
 
 
             <div class="about-jeg-text"  style="text-align: right;">
-              <div class="playful-elements">
                 <h1>Empowering Your Needs</h1>
-              </div>
             </div>
             
           </div>
@@ -286,17 +281,17 @@
       
       <main class="container">
         <dl class="stats-container">
-          <div class="stats">
+          <div class="status">
             <dt class="stats-title">Followers</dt>
             <dd class="stats-status" data-status="increment" data-percentage="4.75"></dd>
             <dd class="stats-value" data-value="405091"></dd>
           </div>
-          <div class="stats">
+          <div class="status">
             <dt class="stats-title">Sales</dt>
             <dd class="stats-status" data-status="increment" data-percentage="54.02"></dd>
             <dd class="stats-value" data-value="12787"></dd>
           </div>
-          <div class="stats">
+          <div class="status">
             <dt class="stats-title">Partners</dt>
             <dd class="stats-status" data-status="decrement" data-percentage="1.39"></dd>
             <dd class="stats-value" data-value="542"></dd>
@@ -304,7 +299,7 @@
         </dl>
       </main>
   
-    <section class="container-contact">
+    <section class="container-contact" id="contact">
       <span class="big-circle"></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form-contact">
@@ -409,10 +404,10 @@
         <!-- 3rd Column: Quick Links -->
         <div class="footer-column">
             <h1>Quick Links</h1>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Blog</a>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact JEG</a>
         </div>
 
         <!-- 4th Column: Helpful Information -->
